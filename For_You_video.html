@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Us💕</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Pacifico&family=Silkscreen:wght@400;700&display=swap');
+
+        body {
+            /* background: linear-gradient(to bottom right, #ff9a9e, #fad0c4); */
+            font-family: 'Dancing Script', cursive;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+
+            background: url('sticker1.png') repeat, url('sticker2.png') repeat;
+            background-size: 250px, 500px;
+        }
+
+        h1 {
+            color: rgb(174, 4, 84);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: "Pacifico", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 40px;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-shadow: 0px 0px 25px rgb(219, 5, 59);
+
+            animation: animation-1;
+            /* animation-delay: 1ms; */
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate-reverse;
+        }
+
+        div video {
+            border: 2px solid rgb(238, 98, 121);
+            border-radius: 15px;
+            box-shadow: 5px 5px 40px palevioletred;
+        }
+
+        @keyframes animation-1 {
+            from {}
+
+            to {
+                text-shadow: none;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>For You 💕</h1>
+    <div>
+        <br>
+        <video id="scroll-video" src="HSPS_2024_blue.mp4" autoplay controls loop height="600" width="1335"></video>
+    </div>
+    <script>
+        // const videoElement = document.getElementById("scroll-video");
+
+        // window.addEventListener("scroll", () => {
+        //     videoElement.currentTime = 0; // Reset playback time
+        //     videoElement.play().catch((error) => {
+        //         console.error("Error playing video:", error);
+        //     });
+        // });
+
+        let videoPlayed = false; // To ensure audio plays only once
+        const videoElement = document.getElementById("scroll-video");
+
+        window.addEventListener("scroll", () => {
+            if (!videoPlayed) {
+                videoElement.play()
+                    .catch((error) => {
+                        console.error("Error playing video:", error);
+                    });
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Silkscreen:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Pacifico&family=Silkscreen:wght@400;700&display=swap'); */
+        /* @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lobster&family=Pacifico&family=Silkscreen:wght@400;700&display=swap'); */
+        /* @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Cookie&family=Lobster&family=Pacifico&family=Silkscreen:wght@400;700&display=swap'); */
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Cookie&family=Lobster&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Silkscreen&display=swap');
+
+
+        body {
+            /* background: linear-gradient(to bottom right, #ff9a9e, #fad0c4); */
+            font-family: 'Dancing Script', cursive;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 150vh;
+            justify-content: center;
+            align-items: center;
+
+            background: url('sticker2.png') repeat,
+                url('sticker2.png') repeat;
+            background-size: 190px, 500px;
+        }
+
+        h1 {
+            color: rgb(174, 4, 84);
+            text-align: center;
+            /* font-family: "Silkscreen", sans-serif;
+            font-weight: 525px;
+            font-style: normal; */
+            margin: 0;
+            padding: 0;
+
+            font-family: "Pacifico", serif;
+            font-weight: 500;
+            font-style: normal;
+
+            font-size: 40px;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-shadow: 0px 0px 25px rgb(225, 0, 56);
+
+            animation: animation-1;
+            /* animation-delay: 1ms; */
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+        }
+
+        form {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-feature-settings: "aalt";
+            font-weight: 200px;
+        }
+
+        nav ul li {
+            /* list-style: none; */
+            list-style-position: outside;
+            list-style-type: "💕";
+            background-color: #ff9a9e;
+            border: 2px solid rgb(252, 2, 69);
+            border-radius: 10px;
+            text-shadow: 0px 0px 25px rgb(243, 9, 48);
+            box-shadow: 0px 0px 15px rgb(252, 2, 69);
+            padding: 0vw 15px;
+            margin-right: 2vw;
+            border-style: double;
+            white-space: preserved;
+            border-left: 2vw solid rgb(246, 18, 71);
+            border-right: 2vw solid rgb(246, 18, 71);
+
+            animation: animation-1;
+            /* animation-delay: 1ms; */
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+        }
+
+        input[type="text"] {
+            border: 2px solid #e80476;
+            border-radius: 10px;
+            /* padding: 1px; */
+            width: 220px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        select {
+            border: 2px solid #e80476;
+            border-radius: 10px;
+            /* padding: 4px; */
+            width: 200px;
+            font-size: 14px;
+            font-weight: 550;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        div a {
+            margin-top: 20px;
+            font-weight: bolder;
+            font-family: cursive;
+            text-decoration: none;
+            color: #ff002b;
+            background-color: rgb(254, 106, 141);
+            border: 2px solid rgb(255, 4, 62);
+            text-shadow: 15px 15px 15px palevioletred;
+            border-radius: 10px;
+            padding: 10px 10px;
+
+            position: relative;
+            top: 81.5vh;
+            left: 4px;
+
+            box-shadow: 0px 0px 40px rgb(221, 1, 38);
+
+
+            animation: animation-1;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+        }
+
+        .name {
+            box-shadow: #ff002b;
+        }
+
+        /* div a {
+            padding: 4px 6px;
+            position: relative;
+            top: 500px;
+            left: -1px;
+            box-shadow: 0px 0px 40px rgb(221, 1, 38);
+            
+
+            animation: animation-1;
+            /* animation-delay: 1ms; */
+        /* animation-duration: 1s; */
+        /* animation-iteration-count: infinite; */
+        /* animation-timing-function: ease-in-out; */
+        /* animation-direction: alternate; */
+        /* } */
+
+        @keyframes animation-1 {
+            from {}
+
+            to {
+                text-shadow: none;
+                box-shadow: none;
+            }
+        }
+
+        /* --------------------------------------------------------------------- */
+        .container {
+            padding: 20px 5px;
+            outline: 2px solid rgb(217, 10, 45);
+            outline-offset: 20px;
+            /* padding: 45px; */
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            /* position: relative; */
+            /* left: 3.5vw; */
+            /* left: -2vw; */
+            /* top: -1vh; */
+            margin: 10px;
+            text-align: left;
+            /* background-color: rgb(255, 249, 252); */
+            border: 2px solid rgb(217, 10, 45);
+            width: 280px;
+            height: 530px;
+            border-radius: 10px;
+            background: linear-gradient(to bottom right, #f75b60, #fad0c4);
+            /* background: linear-gradient(to bottom right, rgb(217, 10, 45), rgb(254, 137, 165)) */
+            box-shadow: 0px 0px 25px rgb(235, 22, 79);
+        }
+
+        .card-image-1 {
+            padding: 5px;
+        }
+
+        .card-image-1 img {
+            border-radius: 10px;
+            border: 2px solid black;
+            margin-left: -2px;
+            margin-top: -2px;
+        }
+
+        .card-image-2 {
+            padding: 5px;
+        }
+
+        .card-image-2 img {
+            border-radius: 10px;
+            border: 2px solid black;
+            margin-left: -2px;
+            margin-top: -2px;
+        }
+
+        .card-image-3 {
+            padding: 5px;
+        }
+
+        .card-image-3 img {
+            border-radius: 10px;
+            border: 2px solid black;
+            margin-left: -2px;
+            margin-top: -2px;
+        }
+
+        .card-image-4 {
+            padding: 5px;
+        }
+
+        .card-image-4 img {
+            border-radius: 10px;
+            border: 2px solid black;
+            margin-left: -2px;
+            margin-top: -2px;
+        }
+
+        .capsules {
+            padding: 12px;
+            font-family: "Lobster", serif;
+            font-size: medium;
+            font-weight: 530;
+        }
+
+        .capsules span {
+            /* border: 2px solid slategray; */
+            padding: 0px 5px;
+            margin: 1px;
+            border-radius: 15px;
+            border: 2px solid rgb(255, 4, 62);
+            color: black;
+        }
+
+        .content {
+            padding: 1px 15px;
+            /* padding-bottom: 10px; */
+            /* font-family: "Cookie", serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: x-large; */
+
+            /* background: linear-gradient(to bottom right, #ff9a9e, #fad0c4); */
+
+            /* height: 30vh; */
+            /* white-space: wrap;
+            overflow-y: scroll;
+            scroll-behavior: smooth; */
+        }
+
+        .content h2 {
+            font-family: "Lobster", serif;
+            font-size: xx-large;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .content p {
+            padding: 3px 0px;
+            text-align: justify;
+            height: 16vh;
+            width: 18.5vw;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+            scroll-margin-block-start: 5px;
+            scrollbar-width: none;
+            white-space-collapse: preserve-breaks;
+            position: relative;
+            top: -15px;
+
+            /* font-family: "Lobster", serif; */
+            /* font-family: 'Dancing Script', cursive;
+            font-size: large;
+            font-weight: 100;
+            font-style: normal; */
+
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* .checkboxes{
+            margin: 0vw 14vw;
+        } */
+
+        /* left side */
+        .img1 img {
+            width: 150px;
+            height: 135px;
+            object-fit: cover;
+            object-position: left;
+            position: absolute;
+            left: 9vw;
+            top: 40px;
+            border: 4px solid black;
+            border-radius: 10px;
+            transform: rotate(-4deg);
+        }
+
+        .img2 img {
+            width: 150px;
+            height: 135px;
+            object-fit: cover;
+            position: absolute;
+            left: 22vw;
+            top: 105px;
+            border: 4px solid black;
+            border-radius: 10px;
+            transform: rotate(4deg);
+        }
+
+        .img3 img {
+            width: 150px;
+            height: 135px;
+            object-fit: cover;
+            position: absolute;
+            left: 9vw;
+            top: 220px;
+            border: 4px solid black;
+            border-radius: 10px;
+            transform: rotate(-4deg);
+        }
+
+        .img4 img {
+            width: 150px;
+            height: 135px;
+            object-fit: cover;
+            position: absolute;
+            left: 22vw;
+            top: 305px;
+            border: 4px solid black;
+            border-radius: 10px;
+            transform: rotate(4deg);
+        }
+
+        .img5 img {
+            width: 150px;
+            height: 135px;
+            object-fit: cover;
+            object-position: top;
+            position: absolute;
+            left: 9vw;
+            top: 400px;
+            border: 4px solid black;
+            border-radius: 10px;
+            transform: rotate(-4deg);
+        }
+
+        /* right side */
+        .img6 img {
+            width: 150px;
+            height: 135px;
+            object-fit: cover;
+            object-position: top;
+            position: absolute;
+            left: 80vw;
+            top: 40px;
+            border: 4px solid black;
+            border-radius: 10px;
+            transform: rotate(4deg);
+        }
+
+        .img7 img {
+            width: 150px;
+            height: 135px;
+            object-fit: cover;
+            position: absolute;
+            left: 67vw;
+            top: 105px;
+            border: 4px solid black;
+            border-radius: 10px;
+            transform: rotate(-4deg);
+        }
+
+        .img8 img {
+            width: 150px;
+            height: 135px;
+            object-fit: cover;
+            position: absolute;
+            left: 80vw;
+            top: 220px;
+            border: 4px solid black;
+            border-radius: 10px;
+            transform: rotate(4deg);
+        }
+
+        .img9 img {
+            width: 150px;
+            height: 135px;
+            object-fit: cover;
+            object-position: top;
+            position: absolute;
+            left: 67vw;
+            top: 305px;
+            border: 4px solid black;
+            border-radius: 10px;
+            transform: rotate(-4deg);
+        }
+
+        .img10 img {
+            width: 150px;
+            height: 135px;
+            object-fit: cover;
+            position: absolute;
+            left: 80vw;
+            top: 400px;
+            border: 4px solid black;
+            border-radius: 10px;
+            transform: rotate(4deg);
+        }
+
+        .container .card .card-image-1 img {
+            width: 270px;
+            height: 244px;
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+        .container .card .card-image-2 img {
+            width: 270px;
+            height: 244px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .container .card .card-image-3 img {
+            width: 270px;
+            height: 244px;
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+        .container .card .card-image-4 img {
+            width: 270px;
+            height: 244px;
+            object-fit: cover;
+            object-position: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>For You 💕</h1>
+    <form action="Application">
+        <nav>
+            <ul>
+                <li class="name">
+                    <label for="name">Enter your name: </label>
+                    <input type="text" id="name" name="name" placeholder="Your cute little name here please">
+                </li>
+            </ul>
+        </nav>
+        <!-- <div>
+            <br>
+            <label for="gender">Enter your gender: </label>
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female">Female</label>
+        </div> -->
+        <!-- <div>
+            <br>
+            <label for="address">Enter your address: </label>
+            <input type="text" id="address" placeholder="Your address here">
+        </div> -->
+        <div>
+            <br>
+            <nav>
+                <ul>
+                    <li>
+                        <label for="selectpartner">Select your life partner: </label>
+                        <select name="names" id="names">
+                            <option value=""><b>Himanshu (aka pakoda)</b></option>
+                            <option value="">You don't have any other option, love 😉</option>
+                            <!-- <option value="">Pragati</option>
+                             <option value="">Siddharth</option>
+                             <option value="">Arushi</option> -->
+                            <!-- <option value="">Sukhraj</option> -->
+                            <!-- <option value="">Akshat</option> -->
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <br>
+            <label for="Things">What all did we miss doing?: </label>
+            <nav>
+                <ul>
+                    <div class="checkboxes">
+                        <li>
+                            <input type="checkbox" id="Things" name="Things">
+                            <label for="Things">kissieeeeeeees 😘</label>
+                        </li>
+                        <br>
+                        <li>
+                            <input type="checkbox" id="Things" name="Things">
+                            <label for="Things">hugging each other to death(almost) 😚</label>
+                        </li>
+                        <br>
+                        <li>
+                            <input type="checkbox" id="Things" name="Things">
+                            <label for="Things">being a maniac 😛</label>
+                        </li>
+                        <br>
+                        <li>
+                            <input type="checkbox" id="Things" name="Things">
+                            <label for="Things">spending late nights together 😌</label>
+                        </li>
+                        <br>
+                        <li>
+                            <input type="checkbox" id="Things" name="Things">
+                            <label for="Things">driving each other crazy 😅</label>
+                        </li>
+                        <br>
+                        <li>
+                            <input type="checkbox" id="Things" name="Things">
+                            <label for="Things">getting wild with each other 🥵</label>
+                        </li>
+                        <br>
+                        <li>
+                            <label for="Things">Enough with the checkboxes, give your man a kiss right now 😗</label>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </form>
+    <audio id="scroll-audio" src="Chord Overstreet - Hold On (Lyrics).mp3" autoplay loop></audio>
+    <div>
+        <a href="For_You_video.html">Next</a>
+    </div>
+    <div class="img">
+        <div class="img1"><img src="For_You Images/img14.jpeg"></div>
+        <div class="img2"><img src="For_You Images/img18.jpeg"></div>
+        <div class="img3"><img src="For_You Images/img7.jpeg"></div>
+        <div class="img4"><img src="For_You Images/img8.jpeg"></div>
+        <div class="img5"><img src="For_You Images/img3.jpeg"></div>
+        <div class="img6"><img src="For_You Images/img6.jpeg"></div>
+        <div class="img7"><img src="For_You Images/img19.jpeg"></div>
+        <div class="img8"><img src="For_You Images/img11.jpeg"></div>
+        <div class="img9"><img src="For_You Images/img9.jpeg"></div>
+        <div class="img10"><img src="For_You Images/img22.jpeg"></div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-image-1">
+                <img src="For_You Images/img23.jpeg">
+            </div>
+            <div class="capsules">
+                <!-- <span>Pragati</span> -->
+                <span>Gorgeous 😘</span>
+                <!-- <span>Manali 😚</span> -->
+            </div>
+            <div class="content">
+                <h2 class="gradient-text">Dream 💤</h2>
+                <p>There were many other dreams about us but they were way too wild, so I'd better tell you about them somewhere private, maybe in the blocks 😏.
+                    
+                So, we were headed to somewhere by bus, we were waiting for our bus. I don't know which bus stand, which city, which state, it was just a huge bus stand. There were other buses too. Once our bus arrived we hopped onto it and took our seats. I took the window seat and you sat besides me. Also, there were two washroom at the back which was both weird and convenient. Later I needed to use the washroom, so I got up and started walking. After that, I don't remember anything. Maybe I woke up. 🤷🏻‍♂️</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image-2">
+                <img src="For_You Images/img12.jpeg">
+            </div>
+            <div class="capsules">
+                <!-- <span>Pragati</span> -->
+                <span>Pakodi 😚</span>
+                <!-- <span>My Love 💖</span>
+                <span>Call Centre</span> -->
+                <!-- <span>Beautiful ✨</span> -->
+            </div>
+            <div class="content">
+                <h2>I miss you 🥺</h2>
+                <p>I'm typing this on 30th December at 12:45 am. Pragati yaar, I'm missing you so, so, so, so, sooooo much rn! Ever since we came back from Manali, not a single day has gone by without me looking at our vacation pics. I look at our photos and videos daily, reminiscing all the fun we had together - tumhara pagalpan, tumhari mujhe bushes mein giraane waali zid, your breathtaking eyes, your sweet, cute face - everything about you. I'm missing it all so much.
+                    
+                There's still a week left before we meet again. Somehow, I'll get through it. I've been trying to keep myself as busy as I can - web dev, DSA, even running errands for my mom. If she asks me to go out to buy something, I'll do it, and if I get the wrong stuff, I'll even go back to exchange it, just anything to distract my mind right now.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image-3">
+                <img src="For_You Images/img13.jpeg">
+            </div>
+            <div class="capsules">
+                <span>Love of my life💕</span>
+                <!-- <span>Campus</span> -->
+            </div>
+            <div class="content">
+                <h2>You complete me 🌹</h2>
+                <p>I've said it before, I'll say it now, and I'll keep saying it forever - you make me a better man, Pragati. I've literally spent my winter break learning web dev and DSA and you, my love, have played such a significant role in that. I wanted to create something for you, for us - something you could keep close to your heart. Something to remind you that I'll always be in love with you.
+
+                Every day, I wake up thinking about all the things I could learn to make our little masterpiece even better. It's been so many years since I last saw the original, childish version of myself, and you helped me rediscover who I truly am. You've helped me grow, honey, and I'll always love you for that.You've taught me to perceive life differently, to embrace new perspectives. I respect you, my love. I've always respected you and I always will.
+                
+                I've shared the deepest of my secrets with you, fought my trust issues, and learned to trust you because I knew I could confide in you without hesitation. You make me feel amazing! You make me feel alive! The fear of losing you drives me to work harder, to step out of my comfort zone and to do things I once feared.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image-4">
+                <img src="For_You Images/img24.jpeg">
+            </div>
+            <div class="capsules">
+                <span>Trip of a lifetime with my love 💖</span>
+                <!-- <span></span> -->
+            </div>
+            <div class="content">
+                <h2>Manali ❄</h2>
+                <p>This has been one of the most amazing moments of my life, and I'll always cherish our first trip. There are more to come, of course 😉.
+
+                Every day, every hour, every minute, every second with you in Manali was a moment I would want to relive over and over - and it still wouldn't be enough. I wish we had more days - not just to visit the places we missed, but also for the wild nights too, yk 😏.
+                
+                Those snow-capped mountains were as majestic as you. And as much as I couldn't get enough of Manali, I cannot get enough of you. I need you by my side through the best and the worst.
+                
+                I'm always afraid of losing you, maybe because I've seen the people I loved, leave in an instant. Since then, I made a promise to myself to never get attached to anyone. I thought doing so might keep me emotionally safe. And then I met you.
+                
+                It striked to me what life really was. I was afraid of doing something in the present I feared of losing in the future. But all of us have so much to lose and we just can't keep worrying about that. All we can do is make our present memorable, so that one day, when we're on our deathbed, we have tears of reminisence, not regrets.
+                
+                I remember the first time I saw you. It was almost as if I was drawn towards you. For some reason, it was a special moment, and you did bring a smile to my face. I wanted to talk to you and we both know that didn't go so well the first time I tried 😅. I just didn't wanna give up on you, but didn't know how to approach you either. I almost lost you the night I told you that I loved you and you said that you were committed. People like you come once in a lifetime baby, and I so didn't wanna lose you.
+                
+                I haven't really been attached to anyone as deeply as you. I absolutely love our bond, and if death do us part, I promise to find you in every lifetime 😉.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let audioPlayed = false; // To ensure audio plays only once
+        const audioElement = document.getElementById("scroll-audio");
+
+        window.addEventListener("scroll", () => {
+            if (!audioPlayed) {
+                audioElement.play()
+                    .catch((error) => {
+                        console.error("Error playing audio:", error);
+                    });
+            }
+        });
+    </script>
+</body>
+
+</html>
